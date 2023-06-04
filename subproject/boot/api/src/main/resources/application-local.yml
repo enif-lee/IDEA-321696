@@ -1,0 +1,34 @@
+server:
+  port: ${PLATFORM_PORT:-8080}
+infra:
+  shard:
+    database:
+      endpoint: ${CATALOG_DB_URL}
+      port: ${CATALOG_DB_PORT:-5432}
+      username: ${CATALOG_DB_USERNAME}
+      password: ${CATALOG_DB_PASSWORD}
+      database: ${CATALOG_DB_DATABASE}
+      schema: ${CATALOG_DB_SCHEMA}
+  clients:
+    merchant:
+      endpoint: ${MERCHANT_URL}s
+      port: ${MERCHANT_PORT}
+      negotiationType: ${MERCHANT_NEGOTIATION:-PLAINTEXT}
+      keepAlive: ${MERCHANT_KEEPALIVE:-true}
+      keepAliveTime: ${MERCHANT_KEEPALIVE_TIME:-300s}
+      keepAliveTimeout: ${MERCHANT_KEEPALIVE_TIMEOUT:-20s}
+    payment:
+      endpoint: ${PAYMENT_URL}
+      port: ${PAYMENT_PORT}
+      negotiationType: ${PAYMENT_NEGOTIATION:-PLAINTEXT}
+      keepAlive: ${PAYMENT_KEEPALIVE:-true}
+      keepAliveTime: ${PAYMENT_KEEPALIVE_TIME:-300s}
+      keepAliveTimeout: ${PAYMENT_KEEPALIVE_TIMEOUT:-20s}
+    channel:
+      endpoint: ${CHANNEL_URL}
+      port: ${CHANNEL_PORT}
+      negotiationType: ${CHANNEL_NEGOTIATION:-PLAINTEXT}
+      keepAlive: ${CHANNEL_KEEPALIVE:-true}
+      keepAliveTime: ${CHANNEL_KEEPALIVE_TIME:-300s}
+      keepAliveTimeout: ${CHANNEL_KEEPALIVE_TIMEOUT:-20s}
+

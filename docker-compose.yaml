@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  platform_test_database:
+    container_name: platform_test_database
+    image: postgres:15.2
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: platform!123
+    ports:
+      - '15432:5432'
