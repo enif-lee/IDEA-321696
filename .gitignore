@@ -26,11 +26,6 @@ gradle-app.setting
 *.hprof
 
 
-### Intellij ###
-.idea/*
-!.idea/codeStyles
-!.idea/runConfigurations
-
 
 ### Docker compose
 .data
